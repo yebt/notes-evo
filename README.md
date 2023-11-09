@@ -4,7 +4,10 @@ An Electron application with Vue
 
 ## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [VSCode](https://code.visualstudio.com/)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 ## Template:
 
@@ -12,12 +15,28 @@ An Electron application with Vue
 
 ## Steps:
 
-```sh
-# start the project
-pnpm create @quick-start/electron
+### Start the project
 
-# install
+```sh
+pnpm create @quick-start/electron
+```
+
+### install
+
+```sh
 pnpm i
+```
+
+### Add vue devtools
+
+```sh
+# Add vuedevtools
+pnpm install --save-dev @vue/devtools
+```
+
+inside of `src/renderer/src/main.js` put:
+
+```js
 
 ```
 
@@ -47,3 +66,4 @@ $ pnpm build:mac
 # For Linux
 $ pnpm build:linux
 ```
+
