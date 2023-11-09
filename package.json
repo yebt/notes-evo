@@ -1,9 +1,9 @@
 {
   "name": "notes-evo",
   "version": "1.0.0",
-  "description": "An Electron application with Vue",
+  "description": "Notes -> Electron + vite org + vue",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "walo",
   "homepage": "https://www.electronjs.org",
   "scripts": {
     "format": "prettier --write .",
