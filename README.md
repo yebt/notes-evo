@@ -29,15 +29,27 @@ pnpm i
 
 ### Add vue devtools
 
+- [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer)
+
 ```sh
-# Add vuedevtools
-pnpm install --save-dev @vue/devtools
+pnpm i electron-devtools-installer --save-dev
 ```
 
-inside of `src/renderer/src/main.js` put:
+put in `src/main/index.js`
 
 ```js
+import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
+// Or if you can not use ES6 imports
+/**
+const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
+*/
+const { app } = require('electron');
 
+app.whenReady().then(() => {
+    installExtension(VUEJS_DEVTOOLS)
+        .then((name) => console.log(`Added Extension:  ${name}`))
+        .catch((err) => console.log('An error occurred: ', err));
+});
 ```
 
 ## Project Setup
